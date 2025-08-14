@@ -1,0 +1,62 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block meta_header %}
+    <title>Summit Neuro - Intake Forms</title>
+    <meta property="og:title"
+          content="Summit Neuro - Download Files" />
+    <meta name="og:description"
+          content="Summit Neuro in Kent, WA provides expert chiropractic care and rehabilitation for sports injuries, auto accidents, and more. Dr. Gary Blackburn and his team focus on improving your overall wellness through personalized care. Whether you’re recovering from an injury or seeking pain r">
+    <meta property="og:url" content="{% url 'core:intake-forms' %}" />
+    <meta property="og:image"
+          content="{% static 'assets/images/rebound_master_logo.png' %}" />\
+{% endblock meta_header %}
+{% block content %}
+<!-- Start Page Banner -->
+<div class="page-banner-area">
+    <div class="container">
+        <div class="page-banner-content">
+            <h2>Intake Forms</h2>
+            
+            <ul class="pages-list">
+                <li><a href="{% url 'core:index' %}">Home</a></li>
+                <li>Intake Forms</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Page Banner -->
+
+<!-- Start Gallery Area -->
+<section class="gallery-area pt-100 pb-100">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">
+                <i class="flaticon-hashtag-symbol"></i>
+                Our Intake Form
+            </span>
+            <p><h2>Patient Intake Form</h2></p>
+            <p>To ensure we provide you with the best care possible, please complete the appropriate intake form(s) before your appointment and bring them with you to the clinic. These forms help us understand your medical history, current condition, and any necessary details related to your visit.</p>
+            <p>If you have any questions or need assistance filling out these forms, please contact our office before your appointment. We look forward to helping you on your path to recovery!</p>
+        </div>
+
+        <div class="row">
+            {% for pdf in pdf_files %}
+            <div class="col-lg-4 col-md-6">
+                <div class="single-gallery">
+                    <img src="{% static 'assets/images/gallery/gallery-1.jpg' %}" alt="image">
+
+                    <div class="content">
+                        <h3>
+                            <a href="{% url 'core:intake-form-detail' pdf.id %}">{{ pdf.name }}</a>
+                            <a href="{% url 'core:intake-form-detail' pdf.id %}" style="float: right;"><img src="{% static 'assets/images/download_document.png' %}" alt="image" style="width: 36px;"></a>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- End Gallery Area -->
+{% endblock content %}

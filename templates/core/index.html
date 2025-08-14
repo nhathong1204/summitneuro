@@ -1,0 +1,552 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block meta_header %}
+    <title>Chiropractic Care & Injury Rehabilitation in Kent, WA - Summit Neuro</title>
+    <meta property="og:title"
+          content="Chiropractic Care & Injury Rehabilitation in Kent, WA - Summit Neuro" />
+    <meta name="og:description"
+          content="Summit Neuro in Kent, WA provides expert chiropractic care and rehabilitation for sports injuries, auto accidents, and more. Dr. Gary Blackburn and his team focus on improving your overall wellness through personalized care. Whether you’re recovering from an injury or seeking pain r">
+    <meta property="og:url" content="{% url 'core:index' %}" />
+    <meta property="og:image"
+          content="{% static 'assets/images/rebound_master_logo.png' %}" />
+{% endblock meta_header %}
+{% block content %}
+<!-- Start Main Slides Area -->
+<div class="home-slides owl-carousel owl-theme">
+    <div class="main-slides-item">
+        <div class="container">
+            <div class="main-slides-content">
+                <h1 style="color: #FFFFFF">Personalized <br /><span style="color:#FFB700">Summit Neuro Advanced Treatment</span></h1>
+                <p style="color: #F9F161;">Experience the Future of Chiropractic Care at Summit Neuro – The Most Advanced Facility in the PNW</p>
+                
+                <div class="slides-btn">
+                    {% if request.resolver_match.url_name == "index" %}
+                        <a href="#contact_us" class="default-btn">Book Appointment</a>
+                    {% else %}
+                        <a href="{% url 'core:index' %}#contact_us" class="default-btn">Book Appointment</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Main Slides Area -->
+
+<!-- Start Features Area -->
+<section class="features-area pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-features">
+                    <div class="content">
+                        <h3>
+                            <a href="javascript:void(0)">Elite Rehabilitation & Recovery</a>
+                        </h3>
+                        <p>State-of-the-art therapies designed to restore function, mobility, and peak performance</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single-features bg-f57e57">
+                    <div class="content">
+                        <h3>
+                            <a href="javascript:void(0)">Cutting-Edge Precision</a>
+                        </h3>
+                        <p>Revolutionary neuro care using the latest technology for unparalleled accuracy</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 offset-lg-0 offset-md-3" id="our_services">
+                <div class="single-features bg-4a6577">
+                    <div class="content">
+                        <h3>
+                            <a href="javascript:void(0)">Personalized & Optimize</a>
+                        </h3>
+                        <p>Custom treatment plans powered by the most innovative diagnostic tools in neuroscience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Features Area -->
+
+<!-- Start Services Area -->
+<section class="services-area pb-70">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7">
+                <div class="section-title-warp">
+                    <span class="sub-title">
+                        <i class="flaticon-hashtag-symbol"></i>
+                        Our Services
+                    </span>
+                    <h2>Enjoy Specialized Care For Your Neuro</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <div class="services-image">
+                        <a href="javascript:void(0)"><img src="{% static 'assets/images/services/services-1.jpg' %}" alt="image"></a>
+
+                    </div>
+
+                    <div class="services-content">
+                        <h3>
+                            <a href="javascript:void(0)">Brain Performance Optimization</a>
+                        </h3>
+                        <p>Enhance neural function and cognitive clarity through precise chiropractic adjustments.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <div class="services-image">
+                        <a href="javascript:void(0)"><img src="{% static 'assets/images/services/services-2.jpg' %}" alt="image"></a>
+
+                    </div>
+
+                    <div class="services-content">
+                        <h3>
+                            <a href="javascript:void(0)">Dizziness & Vertigo</a>
+                        </h3>
+                        <p>Restore balance and stability by aligning the spine and improving vestibular function.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6">
+                <div class="single-services">
+                    <div class="services-image">
+                        <a href="javascript:void(0)"><img src="{% static 'assets/images/services/services-3.jpg' %}" alt="image"></a>
+
+                    </div>
+
+                    <div class="services-content">
+                        <h3>
+                            <a href="javascript:void(0)">Neuro Health</a>
+                        </h3>
+                        <p>Optimize nervous system function with chiropractic care for peak brain-body communication.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Services Area -->
+
+<!-- Start Overview Area -->
+<section class="overview-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <div class="overview-content">
+                    <span class="sub-title">
+                        <i class="flaticon-hashtag-symbol"></i>
+                        We Care For Every Patient
+                    </span>
+                    <h3>Revolutionary Neurological<br/> Diagnostic Technology!</h3>
+                    <p>Contact Us Today <a href="tel:4252427246">425.242.7246</a></p>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="overview-image">
+                    <img src="{% static 'assets/images/overview.png' %}" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Overview Area -->
+
+<!-- Start Appointment Overview Area -->
+<section class="appointment-overview-area pb-100" id="contact_us">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-4 col-md-12">
+                <div class="appointment-overview-contact">
+                    <img src="{% static 'assets/images/appointment/appointment-1.jpg' %}" alt="image">
+                    <div class="appointment-info">
+                        <ul class="call-info">
+                            <li>
+                                <i class="flaticon-emergency-call"></i>
+                                <span class="fs-3">Call Today</span>
+                                <span><a href="tel:088123654987">425.242.7246</a></span>
+                            </li>
+                        </ul>
+                        <p>Feel Better - Move Better</p>
+                        <a href="{% url 'core:contact-us' %}" class="default-btn">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="appointment-overview-box">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="content">
+                                <h4>Don't wait to feel better<br />Schedule your visit now!</h4>
+                                
+                                <div class="box-image">
+                                    <img src="{% static 'assets/images/appointment/appointment-2.jpg' %}" alt="image">
+
+                                    <a href="https://www.youtube.com/watch?v=Buhosl-jJGA" class="video-btn popup-youtube">
+                                        <i class='bx bx-play'></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="make-appointment-content">
+                                <h4 style="text-align: center; margin-top: 34px;">
+                                    <i class="flaticon-calendar"></i>
+                                    Make An Appointment
+                                </h4> 
+
+                                <form method="POST" id="contact-form-ajax" action="">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <input type="text" name="full_name" id="full_name" required="" class="form-control" placeholder="Name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" name="email" id="email" class="form-control" required="" placeholder="Email" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" name="phone" id="phone" required="" class="form-control" placeholder="Phone" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <input type="text" name="message" class="form-control" id="message" placeholder="Leave your message" required>
+                                    </div>
+    
+                                    <button type="submit" class="default-btn">Book Appointment</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Appointment Overview Area -->
+
+<!-- Start OC FAQ Area -->
+<div class="oc-faq-area pb-100">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="oc-faq-image" style="background-image: url('{% static "assets/images/orthopedic-care/faq.jpg" %}')"></div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="oc-faq-accordion">
+                    <h2>ADVANCED NEURO AI TECHNOLOGY WITH SPRYSON</h2>
+
+                    <div class="accordion">
+                        <div class="accordion-item">
+                            <div class="accordion-title active">
+                                <i class='bx bx-plus'></i>
+                                AI-Powered, Personalized Brain Training
+                            </div>
+                            <div class="accordion-content show">
+                                <p>Spryson leverages cutting-edge AI to tailor cognitive exercises based on real-time performance, optimizing memory, focus, and mental agility. Unlike generic brain games, it dynamically adjusts difficulty and targets individual neural weak points.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item" id="our_teams">
+                            <div class="accordion-title">
+                                <i class='bx bx-plus'></i>
+                                Neuroscience-Backed Protocols
+                            </div>
+                            <div class="accordion-content">
+                                <p>Developed with clinical neurologists and cognitive scientists, Spryson’s programs are rooted in peer-reviewed research on neuroplasticity, ensuring measurable improvements in processing speed, decision-making, and stress resilience.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <div class="accordion-title">
+                                <i class='bx bx-plus'></i>
+                                Seamless Wearable Integration
+                            </div>
+                            <div class="accordion-content">
+                                <p>Syncs with Apple Watch, Oura Ring, and EEG headsets to track physiological markers (sleep, HRV, brainwaves), providing a holistic view of cognitive health and recovery—bridging mental training with biometric feedback.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End About Area -->
+
+<!-- Start Doctor Area -->
+<section class="about-area pb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="about-content">
+                    <span class="sub-title">
+                        <i class="flaticon-hashtag-symbol"></i>
+                        Our Team
+                    </span>
+                    <h3>Meet <span>Dr. Gary Blackburn, DC, FACFN</span></h3>
+                    <p>With a distinguished career spanning military service, elite athletics, and clinical neuroscience, Dr. Gary Blackburn brings unparalleled expertise in brain health, concussion management, and cognitive optimization.</p>
+
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <ul class="about-list">
+                                <li>
+                                    <i class="flaticon-check"></i>
+                                    Experienced & Specialized: <span style="color: #6a6c72">Over 30 years in sports medicine and clinical neuroscience.</span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-check"></i>
+                                    Military-Trained: <span style="color: #6a6c72">Began concussion management and performance enhancement as an Army Medic in 1986.</span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-check"></i>
+                                    Highly Educated: <span style="color: #6a6c72">3,000+ hours of advanced training with certifications in Clinical Neurosciences and Functional Neurology.</span>
+                                </li>
+                                <p><h5>Accolades: </h5></p>
+                                <li>
+                                    <i class="flaticon-check"></i>
+                                    Elite Consultant: <span style="color: #6a6c72">Official Team Chiropractor for the Detroit Lions and consultant for the Detroit Tigers.</span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-check"></i>
+                                    Olympic-Level Expertise: <span style="color: #6a6c72">Completed a sports medicine rotation with the U.S. Olympic Committee at the 2012 London Games.</span>
+                                </li>
+                                <li>
+                                    <i class="flaticon-check"></i>
+                                    Award-Winning: <span style="color: #6a6c72">Three-time "Best of Kent" winner.</span>
+                                </li>
+                            </ul>
+
+                            <a href="{% url 'core:dr-gary' %}" class="default-btn" style="margin-top: 30px; float: right; padding: 10px 20px;">See more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="about-image">
+                    <img src="{% static 'assets/images/doctor/doctor-1.jpg' %}" alt="image">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Doctor Area -->
+
+<!-- Start Review Area -->
+<section class="review-area ptb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="section-title-warp">
+                    <span class="sub-title">
+                        <i class="flaticon-hashtag-symbol"></i>
+                        Our Clients Review
+                    </span>
+                    <h2>Real Review From Our Real Customer</h2>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="section-warp-btn">
+                    <a target="_blank" href="https://538ef14eb72647fbba566f54f0f3da5f.elf.site/" class="default-btn">View All</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="review-slides owl-carousel owl-theme">
+            <div class="single-review-item">
+                <div class="icon">
+                    <i class="flaticon-left-quote"></i>
+                </div>
+                <p>Have recently started seeing Dr. Blackburn and I feel like a brand new person! My back hasn't felt this good in...I don't remember when. He really knows what he is doing! Great personality and overall great experience! So glad I was referred to him! Taking all my kids to see him now!</p>
+
+                <div class="review-info">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocKlVbfta1bdRHItb6uIG_bp1h2lWa0Nt7DKDrRQ07jaQV_-9g=s120-c-rp-mo-br100" alt="image">
+                    <h3>Jennifer barr</h3>
+                    <span>From Google Review</span>
+                </div>
+            </div>
+
+            <div class="single-review-item">
+                <div class="icon">
+                    <i class="flaticon-left-quote"></i>
+                </div>
+                <p>Dr. Blackburn and team are amazing. True healers. We highly recommend them to all.</p>
+
+                <div class="review-info">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjU0wDMBwG1ep1sg0PSx6Ywp5gvaW93K_6C7mgd5IW94wHjynrs=s120-c-rp-mo-br100" alt="image">
+                    <h3>Dr. Griswold ShedLight</h3>
+                    <span>From Google Review</span>
+                </div>
+            </div>
+
+            <div class="single-review-item">
+                <div class="icon">
+                    <i class="flaticon-left-quote"></i>
+                </div>
+                <p>I started going to see Dr. Blackburn in September 2022. I have had painful plantar fasciitis off and on for 10 years. I’m a nurse and I spend 12+ hours on my feet, so everything I’ve tried (and I’ve tried everything there is) only worked temporarily until I met Dr. Blackburn...</p>
+
+                <div class="review-info">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjXoDa4FmD4fpp7U2Z1p2jfZI4PIL1inrF45k7L9Abd0YDwcyzWU1w=s120-c-rp-mo-br100" alt="image">
+                    <h3>Sarah Day</h3>
+                    <span>From Google Review</span>
+                </div>
+            </div>
+
+            <div class="single-review-item">
+                <div class="icon">
+                    <i class="flaticon-left-quote"></i>
+                </div>
+                <p>My son was diagnosed with pectus carinatum, after years of the pediatrician saying his chest was normal, I finally I insisted on an x-ray which showed pectus carinatum and scoliosis. I took him to a few specialists with him being 17 there wasn’t much they could do, So basically there were no answers...</p>
+
+                <div class="review-info">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocKAeBAk2_-MtmiLdO8-kclkLWBA9OE_QP0iFp6Gz-dhSMyTtwEd=s120-c-rp-mo-ba2-br100" alt="image">
+                    <h3>Linnea Bragg</h3>
+                    <span>From Google Review</span>
+                </div>
+            </div>
+
+            <div class="single-review-item">
+                <div class="icon">
+                    <i class="flaticon-left-quote"></i>
+                </div>
+                <p>I have served in the military for 13 years and throughout much of that time I've dealt with chronic pain. I have done physical therapy, occupational therapy and chiropractic services more times than I can remember, always yielding little to no results...</p>
+
+                <div class="review-info">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjWYjQszLwb171lDeGcCQldr0EvfsdsnQyveo219ZK2cB7auUGU=s120-c-rp-mo-br100" alt="image">
+                    <h3>Zachary Douglas</h3>
+                    <span>From Google Review</span>
+                </div>
+            </div>
+
+            <div class="single-review-item">
+                <div class="icon">
+                    <i class="flaticon-left-quote"></i>
+                </div>
+                <p>Great service everyone is great</p>
+
+                <div class="review-info">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocI3GRst1l41Tl0Xok-5_14Y5l_lYKItvOiZBhe2mLhgdUhI9g=s120-c-rp-mo-ba4-br100" alt="image">
+                    <h3>Gary “Gurdey” Gerde</h3>
+                    <span>From Google Review</span>
+                </div>
+            </div>
+
+            <div class="single-review-item">
+                <div class="icon">
+                    <i class="flaticon-left-quote"></i>
+                </div>
+                <p> got recommended to Dr. Mo awhile ago but driving to Kent was a bit out the ways for me. I finally got some time to drive down and it was WORTH every second on the road...</p>
+
+                <div class="review-info">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjWzCJbi9qRwC3C0H5vxTO8DKoiEufcgYLxhvVsBYQuuXr582XAJeg=s120-c-rp-mo-br100" alt="image">
+                    <h3>Sabrina Kim</h3>
+                    <span>From Google Review</span>
+                </div>
+            </div>
+
+            <div class="single-review-item">
+                <div class="icon">
+                    <i class="flaticon-left-quote"></i>
+                </div>
+                <p>I highly recommend seeing Dr.Mo and Dr.Blackburn . They listen , and give the most professional care . Many years ago I had Harrington rods placed with fusions and bone grafting , I was told to never see a chiropractor,...</p>
+
+                <div class="review-info">
+                    <img src="https://lh3.googleusercontent.com/a-/ALV-UjWD_HVDxWLTvthGWdhiD_5IVowYqdnpNcKSaCae73p3-Yhy1o75=s120-c-rp-mo-br100" alt="image">
+                    <h3>Francesca Fitzgerald</h3>
+                    <span>From Google Review</span>
+                </div>
+            </div>
+
+            <div class="single-review-item">
+                <div class="icon">
+                    <i class="flaticon-left-quote"></i>
+                </div>
+                <p>Dr. Mo is one of the top notch chiropractors I have come across. Was having stiffness in my back and neck due to work … his adjustment on the first try relieved all the built up tension around those areas. Super friendly and knowledgeable staff as well...</p>
+
+                <div class="review-info">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocKwUuQBYfk97DeUmHFUv-R2O-uH8bMFLo66QbsjRjwZNZVQgw=s120-c-rp-mo-br100" alt="image">
+                    <h3>kenney kim</h3>
+                    <span>From Google Review</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Review Area -->
+
+{% if blogs %}
+<!-- Start Blog Area -->
+<section class="blog-area pt-100 pb-70">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <div class="section-title-warp">
+                    <span class="sub-title" id="blog">
+                        <i class="flaticon-hashtag-symbol"></i>
+                        Update News and Blogs
+                    </span>
+                    <h2>Stay Updated with Our Latest News and Blog</h2>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="section-warp-btn">
+                    <a href="{% url 'core:blogs' %}" class="default-btn">View All</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            {% for blog in blogs  %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <div class="blog-image">
+                            <a href="{% url 'core:blog-detail' blog.slug %}"><img src="{{ blog.image.url }}" style="height: 280px;" alt="image"></a>
+
+                            <div class="tag">{{ blog.created_at|date:"d M" }}</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="child_blog_content">
+                                <h3>
+                                    <a href="{% url 'core:blog-detail' blog.slug %}">{{ blog.title|truncatewords:80 }}</a>
+                                </h3>
+                                <p style="height: 110px;">{{ blog.mini_description|truncatewords:30 }}</p>
+                            </div>
+                            <!-- <a href="{% url 'core:blog-detail' blog.slug %}" class="blog-btn">Read More</a> -->
+
+                            <ul class="entry-meta">
+                                <li>
+                                    <i class='bx bxs-user'></i>
+                                    <span>By Administrator</span>
+                                </li>
+                                <li style="float: right;">
+                                    <a href="{% url 'core:blog-detail' blog.slug %}" class="blog-btn">Read More</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</section>
+<!-- End Blog Area -->
+{% endif %}
+{% endblock content %}

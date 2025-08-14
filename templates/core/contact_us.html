@@ -1,0 +1,116 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block meta_header %}
+    <title>Contact Us</title>
+    <meta property="og:title"
+          content="Contact Us" />
+    <meta name="og:description"
+          content="Summit Neuro in Kent, WA provides expert chiropractic care and rehabilitation for sports injuries, auto accidents, and more. Dr. Gary Blackburn and his team focus on improving your overall wellness through personalized care. Whether you’re recovering from an injury or seeking pain r">
+    <meta property="og:url" content="{% url 'core:contact-us' %}" />
+    <meta property="og:image"
+          content="{% static 'assets/images/rebound_master_logo.png' %}" />
+{% endblock meta_header %}
+{% block content %}
+<!-- Start Page Banner -->
+<div class="page-banner-area">
+    <div class="container">
+        <div class="page-banner-content">
+            <h2>Contact Us</h2>
+            
+            <ul class="pages-list">
+                <li><a href="{% url 'core:index' %}">Home</a></li>
+                <li>Contact Us</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Page Banner -->
+
+<!-- Start Contact Area -->
+<section class="contact-area ptb-100">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">
+                <i class="flaticon-hashtag-symbol"></i>
+                Message Us
+            </span>
+            <h2>Drop Us Message for Any Query</h2>
+            <p>Have a question? Let’s connect—drop us a message</p>
+        </div>
+
+        <div class="contact-form">
+            <form method="POST" id="contact-form-ajax" action="">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="full_name" id="full_name" class="form-control" required="" data-error="Please enter your name" placeholder="Name">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                            <input type="email" name="email" id="email" class="form-control" required="" data-error="Please enter your email" placeholder="Email">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="phone" id="phone" required="" data-error="Please enter your number" class="form-control" placeholder="Phone">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6">
+                        <div class="form-group">
+                            <input type="text" name="subject" id="subject" class="form-control" required="" data-error="Please enter your subject" placeholder="Subject">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <textarea name="message" class="form-control" id="message" cols="30" rows="5" required="" data-error="Write your message" placeholder="Your Message"></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <button type="submit" class="default-btn">Send Message</button>
+                        <div id="msgSubmit" class="h3 text-center hidden"></div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="contact-info">
+            <div class="contact-info-content">
+                <h3>Contact Us by Phone Number or Email Address</h3>
+                <h2>
+                    <a href="tel:+0881306298615">425.242.7246</a>
+                    <span>OR</span>
+                    <a href="mailto:admin@summitneuro.com">admin@summitneuro.com</a>
+                </h2>
+
+                <ul class="social">
+                    <li>
+                        <a href="https://www.facebook.com/ReboundSportsMed/" target="_blank">
+                            <i class='bx bxl-facebook'></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/rebound_sportsmed/" target="_blank">
+                            <i class='bx bxl-instagram'></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Contact Area -->
+{% endblock content %}

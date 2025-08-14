@@ -1,0 +1,85 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block meta_header %}
+    <title>Chiropractic Care & Injury Rehabilitation in Kent, WA - Summit Neuro</title>
+    <meta property="og:title"
+          content="Chiropractic Care & Injury Rehabilitation in Kent, WA - Summit Neuro" />
+    <meta name="og:description"
+          content="Summit Neuro in Kent, WA provides expert chiropractic care and rehabilitation for sports injuries, auto accidents, and more. Dr. Gary Blackburn and his team focus on improving your overall wellness through personalized care. Whether you’re recovering from an injury or seeking pain r">
+    <meta property="og:url" content="{% url 'core:index' %}" />
+    <meta property="og:image"
+          content="{% static 'assets/images/rebound_master_logo.png' %}" />
+{% endblock meta_header %}
+{% block content %}
+<!-- Start Page Banner -->
+<div class="page-banner-area">
+    <div class="container">
+        <div class="page-banner-content">
+            <h2>Doctor Details</h2>
+            
+            <ul class="pages-list">
+                <li><a href="{% url 'core:index' %}">Home</a></li>
+                <li>Doctor Details</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Page Banner -->
+
+<!-- Start Dentist Details Area -->
+<section class="dentist-details-area ptb-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12 col-md-12">
+                <div class="dentist-details-image text-center">
+                    <img src="{% static 'assets/images/doctor/doctor-1.jpg' %}" alt="image">
+                    <h1 style="color: #E2AB1E; margin-top: 30px;">Gary Blackburn, DC FACFN</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="dentist-details-overview-content">
+            <p><strong>Dr. Gary Blackburn, DC FACFN</strong> is a seasoned chiropractor and functional neurologist with over 30 years of experience in sports medicine, clinical neuroscience, and brain-based rehabilitation. As the founder of Summit Neuro, established in 2007, Dr. Blackburn is dedicated to enhancing patients’ quality of life and optimizing brain and body function through personalized, advanced care.</p>
+
+            <p><strong>A Passionate Legacy in Clinical Neuroscience and Concussion Rehabilitation</strong></p>
+
+            <p>Dr. Blackburn first pursued his interest in concussion management and performance enhancement as an Army Medic in 1986. This early dedication to patient care set the foundation for decades of continued study and practice in sports medicine, concussion rehabilitation, and applied functional neurology. Dr. Blackburn’s extensive post-doctoral work includes certifications in Clinical Neurosciences (2020) and as a Fellow of the American College of Functional Neurology (2022). With over 3,000 hours of continuing education since he began his practice in 1995, Dr. Blackburn exemplifies a commitment to lifelong learning.</p>
+
+            <p><strong>Professional Background and Specialized Training</strong></p>
+
+            <p>Dr. Blackburn trained in clinical neuroscience and functional neurology at the renowned Carrick Institute, with a focus on Vestibular Rehabilitation, Advanced Eye Movements, and Traumatic Brain Injury (TBI). His expertise is reflected in his numerous credentials, including:</p>
+
+            <p>
+                <ul>
+                    <li>Diplomate of Occupational Health and Applied Ergonomics (DACBOH)</li>
+                    <li>Diplomate of the American Chiropractic Rehabilitation Board (DACRB)</li>
+                    <li>Certified Chiropractic Sports and Extremity Practitioner (CCSP-CCEP)</li>
+                    <li>NSCA Certified Strength and Conditioning Specialist (CSCS)</li>
+                    <li>Fellow of Applied Functional Sciences (FAFS), Gray Institute Certified in Applied Functional Sciences (CAFS)</li>
+                </ul>
+            </p>
+
+            <p>With more than 3,000 hours of advanced training, Dr. Blackburn has specialized in areas such as Functional Range Conditioning (FRCms), Functional Manual Reaction (FMR), and Functional Systems Assessment (FRA) to provide expert, patient-centered care.</p>
+
+            <p><strong>High-Performance Sports Consulting</strong></p>
+
+            <p>Dr. Blackburn has a rich history in sports chiropractic, having served as an Official Team Chiropractor for the Detroit Lions (2002-2007) and as a consultant for the Detroit Tigers (2006) before relocating to the Seattle area. He also completed a prestigious sports medicine rotation with the United States Olympic Committee during the 2012 London Games, optimizing athlete care at the Chula Vista training facility.</p>
+
+            <p><strong>Patient-Centered Approach and Recognition</strong></p>
+
+            <p>Dr. Blackburn is known for his compassionate approach, providing each patient with individualized care that combines functional neurology, rehabilitation, and strength conditioning. His dedication has earned him multiple awards, including:</p>
+
+            <p>
+                <ul>
+                    <li>3 time "Best of Kent" Winner</li>
+                    <li>3 time Seattle Met “Top Doc”</li>
+                </ul>
+            </p>
+
+            <p>Dr. Blackburn and Rebound SportsMed are committed to advancing patient care by integrating the latest in clinical neuroscience with a holistic, personalized approach to recovery and performance.</p>
+        </div>
+    </div>
+</section>
+<!-- End Dentist Details Area -->
+{% endblock content %}

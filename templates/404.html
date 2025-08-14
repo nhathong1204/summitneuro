@@ -1,0 +1,48 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block meta_header %}
+    <title>404 Not Found</title>
+    <meta property="og:title"
+          content="404 Not Found" />
+    <meta name="og:description"
+          content="Summit Neuro in Kent, WA provides expert chiropractic care and rehabilitation for sports injuries, auto accidents, and more. Dr. Gary Blackburn and his team focus on improving your overall wellness through personalized care. Whether you’re recovering from an injury or seeking pain r">
+    <meta property="og:url" content="{% url 'core:contact-us' %}" />
+    <meta property="og:image"
+          content="{% static 'assets/images/rebound_master_logo.png' %}" />
+{% endblock meta_header %}
+{% block content %}
+<!-- Start Page Banner -->
+<div class="page-banner-area">
+    <div class="container">
+        <div class="page-banner-content">
+            <h2>404 Error</h2>
+            
+            <ul class="pages-list">
+                <li><a href="{% url 'core:index' %}">Home</a></li>
+                <li>404 Error</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Page Banner -->
+
+<!-- Start Error Area -->
+<section class="error-area ptb-100">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div class="container">
+                <div class="error-content">
+                    <img src="{% static 'assets/images/404.png' %}" alt="error">
+
+                    <h3>Page Not Found</h3>
+                    <p>The page you are looking for might have been removed had its name changed or is temporarily unavailable.</p>
+
+                    <a href="{% url 'core:index' %}" class="default-btn">Go to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Error Area -->
+{% endblock content %}

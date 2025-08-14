@@ -1,0 +1,102 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block meta_header %}
+    <title>Summit Neuro - Blogs</title>
+    <meta property="og:title"
+          content="Summit Neuro - Blogs" />
+    <meta name="og:description"
+          content="Summit Neuro in Kent, WA provides expert chiropractic care and rehabilitation for sports injuries, auto accidents, and more. Dr. Gary Blackburn and his team focus on improving your overall wellness through personalized care. Whether you’re recovering from an injury or seeking pain r">
+    <meta property="og:url" content="{% url 'core:blogs' %}" />
+    <meta property="og:image"
+          content="{% static 'assets/images/rebound_master_logo.png' %}" />
+{% endblock meta_header %}
+{% block content %}
+<!-- Start Page Banner -->
+<div class="page-banner-area">
+    <div class="container">
+        <div class="page-banner-content">
+            <h2>Blogs</h2>
+            
+            <ul class="pages-list">
+                <li><a href="{% url 'core:index' %}">Home</a></li>
+                <li>Blogs</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Page Banner -->
+
+<!-- Start Blog Area -->
+<section class="blog-area pt-100 pb-100">
+    <div class="container">
+        <div class="section-title">
+            <span class="sub-title">
+                <i class="flaticon-hashtag-symbol"></i>
+                Update News and Blogs
+            </span>
+            <h2>Stay Updated with Our Latest News and Blog</h2>
+        </div>
+
+        {% if blogs %}
+        <div class="row">
+            {% for blog in blogs  %}
+                <div class="col-lg-4 col-md-6">
+                    <div class="single-blog">
+                        <div class="blog-image">
+                            <a href="{% url 'core:blog-detail' blog.slug %}"><img src="{{ blog.image.url }}" style="height: 280px;" alt="image"></a>
+
+                            <div class="tag">{{ blog.created_at|date:"d M" }}</div>
+                        </div>
+                        <div class="blog-content">
+                            <div class="child_blog_content">
+                                <h3>
+                                    <a href="{% url 'core:blog-detail' blog.slug %}">{{ blog.title|truncatewords:80 }}</a>
+                                </h3>
+                                <p style="height: 110px;">{{ blog.mini_description|truncatewords:30 }}</p>
+                            </div>
+                            <!-- <a href="{% url 'core:blog-detail' blog.slug %}" class="blog-btn">Read More</a> -->
+
+                            <ul class="entry-meta">
+                                <li>
+                                    <i class='bx bxs-user'></i>
+                                    <span>By Administrator</span>
+                                </li>
+                                <li style="float: right;">
+                                    <a href="{% url 'core:blog-detail' blog.slug %}" class="blog-btn">Read More</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+            {% if total_blogs > 3 %}
+                <div class="col-lg-12 col-md-12">
+                    <div class="pagination-area">
+                        {% if blogs.has_previous %}
+                            <a href="?page={{ blogs.previous_page_number }}" class="prev page-numbers">
+                                <i class='flaticon-left-arrow'></i>
+                            </a>
+                        {% endif %}
+                        {% for num in blogs.paginator.page_range %}
+                            {% if blogs.number == num %}
+                                <span class="page-numbers current" aria-current="page">{{ num }}</span>
+                            {% elif num > blogs.number|add:'-3' and num < blogs.number|add:'3' %}
+                                <a href="?page={{ num }}" class="page-numbers">{{ num }}</a>
+                            {% endif %}
+                        {% endfor %}
+                        {% if blogs.has_next %}
+                            <a href="?page={{ blogs.next_page_number }}" class="next page-numbers">
+                                <i class='flaticon-right-arrow'></i>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+<!-- End Blog Area -->
+{% endblock content %}
