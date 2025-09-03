@@ -3,11 +3,14 @@
 {% load i18n %}
 {% block meta_header %}
     {% if blog %}
-        <title>{{ blog.title }}</title>
-        <meta property="og:title" content="{{ blog.title }}" />
-        <meta name="og:description"content="{{ blog.mini_description }}">
-        <meta property="og:url" content="{% url 'core:blog-detail' blog.slug %}" />
-        <meta property="og:image" content="{{ blog.image.url }}" />
+    <title>Summit Neuro | {{ blog.title }}</title>
+    <meta name="description" content="Summit Neuro – Bellevue’s Leader in Concussion Recovery, Brain Fog Relief, Dizziness Care & Cognitive Boost Using Advanced Neural AI Assessments.">
+    <meta name="description" content="Summit Neuro – Bellevue’s Leader in Concussion Recovery, Brain Fog Relief, Dizziness Care & Cognitive Boost Using Advanced Neural AI Assessments.">
+    <meta property="og:title" content="Summit Neuro | Concussion Recovery & Brain Performance in Bellevue">
+    <meta property="og:description" content="Personalized concussion care, brain fog relief, dizziness treatment & cognitive optimization using advanced Neural AI assessments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.summitneuro.com">
+    <meta property="og:image" content="{% static 'assets/images/summitneuro_master_logo.png' %}" />
     {% endif %}
     
 {% endblock meta_header %}
@@ -35,7 +38,9 @@
                 {% if blog %}
                 <div class="blog-details-desc">
                     <div class="article-image">
-                        <img src="{{ blog.image.url }}" alt="image">
+                        {% if blog.image %}
+                            <img src="{{ blog.image.url }}" style="height: 280px;" alt="image">
+                        {% endif %}
 
                         <div class="tag">{{ blog.created_at|date:"d M" }}</div>
                     </div>

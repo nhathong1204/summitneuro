@@ -2,14 +2,14 @@
 {% load static %}
 {% load i18n %}
 {% block meta_header %}
-    <title>Summit Neuro: Advanced Mental Health Solutions</title>
-    <meta property="og:title"
-          content="Summit Neuro: Advanced Mental Health Solutions" />
-    <meta name="og:description"
-          content="Summit Neuro is the peak of specialized mental health intervention, combining advanced medical technology with a luxurious, patient-centric approach to help individuals reclaim their lives from debilitating mental illness.">
-    <meta property="og:url" content="{% url 'core:index' %}" />
-    <meta property="og:image"
-          content="{% static 'assets/images/summitneuro_master_logo.png' %}" />
+    <title>Summit Neuro | Bellevue’s Leader in Concussion Recovery, Brain Fog Relief & Cognitive Boost</title>
+    <meta name="description" content="Summit Neuro – Bellevue’s Leader in Concussion Recovery, Brain Fog Relief, Dizziness Care & Cognitive Boost Using Advanced Neural AI Assessments.">
+    <meta name="description" content="Summit Neuro – Bellevue’s Leader in Concussion Recovery, Brain Fog Relief, Dizziness Care & Cognitive Boost Using Advanced Neural AI Assessments.">
+    <meta property="og:title" content="Summit Neuro | Concussion Recovery & Brain Performance in Bellevue">
+    <meta property="og:description" content="Personalized concussion care, brain fog relief, dizziness treatment & cognitive optimization using advanced Neural AI assessments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.summitneuro.com">
+    <meta property="og:image" content="https://www.summitneuro.com/images/og-default.jpg">
 {% endblock meta_header %}
 {% block content %}
 <!-- Start Main Slides Area -->
@@ -84,7 +84,7 @@
                         <i class="flaticon-hashtag-symbol"></i>
                         Our Services
                     </span>
-                    <h2>Enjoy Specialized Care For Your Neuro</h2>
+                    <h2>Our Three Main Areas of Focus</h2>
                 </div>
             </div>
         </div>
@@ -150,10 +150,10 @@
                 <div class="overview-content">
                     <span class="sub-title">
                         <i class="flaticon-hashtag-symbol"></i>
-                        We Care For Every Patient
+                        Neuro AI: Redifining Brain Health Measurement
                     </span>
-                    <h3>Revolutionary Neurological<br/> Diagnostic Technology!</h3>
-                    <p>Contact Us Today <a href="tel:4252427246">425.242.7246</a></p>
+                    <h3>Precision Neurological Assessment</h3>
+                    <p>Email us today for a telehealth consultation</p>
                 </div>
             </div>
 
@@ -166,80 +166,6 @@
     </div>
 </section>
 <!-- End Overview Area -->
-
-<!-- Start Appointment Overview Area -->
-<section class="appointment-overview-area pb-100" id="contact_us">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-4 col-md-12">
-                <div class="appointment-overview-contact">
-                    <img src="{% static 'assets/images/appointment/appointment-1.jpg' %}" alt="image">
-                    <div class="appointment-info">
-                        <ul class="call-info">
-                            <li>
-                                <i class="flaticon-emergency-call"></i>
-                                <span class="fs-3">Call Today</span>
-                                <span><a href="tel:088123654987">425.242.7246</a></span>
-                            </li>
-                        </ul>
-                        <p>Feel Better - Move Better</p>
-                        <a href="{% url 'core:contact-us' %}" class="default-btn">Contact Us</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="appointment-overview-box">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="content">
-                                <h4>Don't wait to feel better<br />Schedule your visit now!</h4>
-                                
-                                <div class="box-image">
-                                    <img src="{% static 'assets/images/appointment/appointment-2.jpg' %}" alt="image">
-
-                                    <a href="https://www.youtube.com/watch?v=Buhosl-jJGA" class="video-btn popup-youtube">
-                                        <i class='bx bx-play'></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-6">
-                            <div class="make-appointment-content">
-                                <h4 style="text-align: center; margin-top: 34px;">
-                                    <i class="flaticon-calendar"></i>
-                                    Make An Appointment
-                                </h4> 
-
-                                <form method="POST" id="contact-form-ajax" action="">
-                                    {% csrf_token %}
-                                    <div class="form-group">
-                                        <input type="text" name="full_name" id="full_name" required="" class="form-control" placeholder="Name">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" name="email" id="email" class="form-control" required="" placeholder="Email" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" name="phone" id="phone" required="" class="form-control" placeholder="Phone" required>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <input type="text" name="message" class="form-control" id="message" placeholder="Leave your message" required>
-                                    </div>
-    
-                                    <button type="submit" class="default-btn">Book Appointment</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End Appointment Overview Area -->
 
 <!-- Start OC FAQ Area -->
 <div class="oc-faq-area pb-100">
@@ -374,8 +300,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog">
                         <div class="blog-image">
-                            <a href="{% url 'core:blog-detail' blog.slug %}"><img src="{{ blog.image.url }}" style="height: 280px;" alt="image"></a>
-
+                            <a href="{% url 'core:blog-detail' blog.slug %}">
+                            {% if blog.image %}
+                                <img src="{{ blog.image.url }}" style="height: 280px;" alt="image">
+                            {% endif %}
+                            </a>
                             <div class="tag">{{ blog.created_at|date:"d M" }}</div>
                         </div>
                         <div class="blog-content">

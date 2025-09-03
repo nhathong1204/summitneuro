@@ -2,14 +2,14 @@
 {% load static %}
 {% load i18n %}
 {% block meta_header %}
-    <title>Summit Neuro - Blogs</title>
-    <meta property="og:title"
-          content="Summit Neuro - Blogs" />
-    <meta name="og:description"
-          content="Summit Neuro is the peak of specialized mental health intervention, combining advanced medical technology with a luxurious, patient-centric approach to help individuals reclaim their lives from debilitating mental illness.">
-    <meta property="og:url" content="{% url 'core:blogs' %}" />
-    <meta property="og:image"
-          content="{% static 'assets/images/summitneuro_master_logo.png' %}" />
+    <title>Summit Neuro | Blogs</title>
+    <meta name="description" content="Summit Neuro – Bellevue’s Leader in Concussion Recovery, Brain Fog Relief, Dizziness Care & Cognitive Boost Using Advanced Neural AI Assessments.">
+    <meta name="description" content="Summit Neuro – Bellevue’s Leader in Concussion Recovery, Brain Fog Relief, Dizziness Care & Cognitive Boost Using Advanced Neural AI Assessments.">
+    <meta property="og:title" content="Summit Neuro | Concussion Recovery & Brain Performance in Bellevue">
+    <meta property="og:description" content="Personalized concussion care, brain fog relief, dizziness treatment & cognitive optimization using advanced Neural AI assessments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.summitneuro.com">
+    <meta property="og:image" content="{% static 'assets/images/summitneuro_master_logo.png' %}" />
 {% endblock meta_header %}
 {% block content %}
 <!-- Start Page Banner -->
@@ -44,8 +44,11 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="single-blog">
                         <div class="blog-image">
-                            <a href="{% url 'core:blog-detail' blog.slug %}"><img src="{{ blog.image.url }}" style="height: 280px;" alt="image"></a>
-
+                            <a href="{% url 'core:blog-detail' blog.slug %}">
+                            {% if blog.image %}
+                                <img src="{{ blog.image.url }}" style="height: 280px;" alt="image">
+                            {% endif %}
+                            </a>
                             <div class="tag">{{ blog.created_at|date:"d M" }}</div>
                         </div>
                         <div class="blog-content">
