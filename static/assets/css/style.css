@@ -4003,7 +4003,7 @@ Footer Area CSS
   position: relative;
 }
 .single-footer-widget .quick-links li a:hover {
-  color: #E2AB1E;
+  color: #ffffff;
 }
 .single-footer-widget .quick-links li a:hover::before {
   width: 100%;
