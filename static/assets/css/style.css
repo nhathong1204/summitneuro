@@ -1227,6 +1227,7 @@ Features Area CSS
   border-radius: 10px;
   margin-bottom: 30px;
   transition: 0.6s;
+  height: 180px;
 }
 .single-features.bg-f57e57 {
   background-color: #BA7B28;
