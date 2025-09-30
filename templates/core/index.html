@@ -21,11 +21,7 @@
                 <p style="color: #F9F161;">Where Cutting-Edge Science Technology Meets Neurological Healing: The PNW's Leading Center.</p>
                 
                 <div class="slides-btn">
-                    {% if request.resolver_match.url_name == "index" %}
-                        <a href="#contact_us" class="default-btn">Book Appointment</a>
-                    {% else %}
-                        <a href="{% url 'core:index' %}#contact_us" class="default-btn">Book Appointment</a>
-                    {% endif %}
+                    <a target="_blank" href="http://summitneuro.janeapp.com/" class="default-btn">Book Appointment</a>
                 </div>
             </div>
         </div>
@@ -173,7 +169,7 @@
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-12">
                 <video style="width: 100%;border-radius: 25px;" loop="1" muted="" autoplay="1" controls>
-                    <source src="media/home_video.MOV" type="video/mp4">
+                    <source src="media/home_video.mov" type="video/mp4">
                 </video>
             </div>
             <div class="col-lg-6 col-md-12">
