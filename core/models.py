@@ -12,8 +12,8 @@ def user_directory_path(instance, filename):
 
 class Blog(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
-    title = models.CharField(max_length=100)
-    slug = models.SlugField(max_length=100, unique=True, null=True, blank=True)
+    title = models.CharField(max_length=255)
+    slug = models.SlugField(max_length=255, unique=True, null=True, blank=True)
     owner = models.ForeignKey(
         settings.AUTH_USER_MODEL, related_name="blog", null=True, blank=True, on_delete=models.SET_NULL
     )

@@ -12,15 +12,23 @@ from django.conf import settings
 def index(request):
     return render(request, "core/index.html")
 
+def what_we_treat(request):
+    return render(request, "core/what-we-treat.html")
+
+def what_we_do(request):
+    return render(request, "core/what-we-do.html")
+
+def what_to_expect(request):
+    return render(request, "core/what-to-expect.html")
 
 def doctor_detail(request):
     return render(request, "core/dr-gary.html")
 
 def list_blogs(request):
-    list_blogs = Blog.objects.filter(is_active=True).order_by("-created_at")
+    list_blogs = Blog.objects.filter(is_active=True).all()
     total_blogs  = list_blogs.count()
     page = request.GET.get("page", 1)
-    paginator = Paginator(list_blogs, 3)
+    paginator = Paginator(list_blogs, 6)
     try:
         blogs = paginator.page(page)
     except EmptyPage:

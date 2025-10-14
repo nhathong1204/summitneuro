@@ -83,6 +83,15 @@ Default CSS
 .theme-dark p a:hover {
   color: #E2AB1E !important;
 }
+.theme-dark .mean-nav ul li a {
+  color: #677294 !important;
+}
+.theme-dark .pagination-area a {
+  color: #222222 !important;
+}
+.theme-dark .mean-nav h5 a {
+  color: #E2AB1E !important;
+}
 .theme-dark a {
   color: #ffffff !important;
 }

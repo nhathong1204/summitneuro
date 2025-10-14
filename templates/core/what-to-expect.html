@@ -1,0 +1,85 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block meta_header %}
+    <title>Summit Neuro | What To Expect</title>
+    <meta name="description" content="Summit Neuro – Bellevue’s Leader in Concussion Recovery, Brain Fog Relief, Dizziness Care & Cognitive Boost Using Advanced Neural AI Assessments.">
+    <meta name="description" content="Summit Neuro – Bellevue’s Leader in Concussion Recovery, Brain Fog Relief, Dizziness Care & Cognitive Boost Using Advanced Neural AI Assessments.">
+    <meta property="og:title" content="Summit Neuro | Concussion Recovery & Brain Performance in Bellevue">
+    <meta property="og:description" content="Personalized concussion care, brain fog relief, dizziness treatment & cognitive optimization using advanced Neural AI assessments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.summitneuro.com">
+    <meta property="og:image" content="{% static 'assets/images/summitneuro_master_logo.png' %}" />
+{% endblock meta_header %}
+{% block content %}
+<style>
+    :root{
+    --sn-ink:#2f2a26;--sn-ink-2:#4b463f;--sn-muted:#6b6a66;--sn-page:#faf8f5;--sn-card:#fff;--sn-accent:#f59e0b;--sn-accent-2:#ea580c;--sn-line:#ece7e0;
+    }
+    *,*:before,*:after{box-sizing:border-box}
+    body{margin:0;background:var(--sn-page);color:var(--sn-ink);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .sn-c{max-width:1120px;margin:auto;padding:24px}
+    @media(min-width:768px){.sn-c{padding:40px 32px}}
+    .sn-k{display:inline-block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--sn-accent-2)}
+    .sn-t{margin:.4rem 0 .6rem;font-weight:800;line-height:1.15;font-size:2rem}
+    @media(min-width:768px){.sn-t{font-size:2.5rem}}
+    .sn-grad{background:linear-gradient(90deg,var(--sn-accent),var(--sn-accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .sn-sub{color:var(--sn-ink-2);max-width:70ch;font-size:1.05rem}
+    /* Premises */
+    .sn-prem{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px}
+    @media(min-width:768px){.sn-prem{grid-template-columns:repeat(3,1fr)}}
+    .sn-card{background:var(--sn-card);border:1px solid var(--sn-line);border-radius:16px;box-shadow:0 10px 24px rgba(17,12,4,.06),0 2px 6px rgba(17,12,4,.05);padding:18px}
+    .sn-h3{margin:0 0 6px;font-size:1.1rem}
+    .sn-p{margin:0;color:var(--sn-ink-2)}
+    /* Steps */
+    .sn-steps{margin-top:20px}
+    .sn-stepGrid{display:grid;grid-template-columns:1fr;gap:14px}
+    @media(min-width:768px){.sn-stepGrid{grid-template-columns:repeat(3,1fr)}}
+    .sn-step{background:var(--sn-card);border:1px solid var(--sn-line);border-radius:16px;padding:18px}
+    .sn-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:#fff7ed;border:1px solid #ffe7c2;color:var(--sn-accent-2);font-weight:800;font-size:.85rem;margin-bottom:10px}
+    /* Why progress varies */
+    .sn-panel{margin-top:20px;padding:16px;border-radius:16px;background:#fff7ed;border:1px solid #ffe7c2}
+    .sn-ul{margin:10px 0 0;padding-left:18px;color:var(--sn-ink-2)}
+    /* CTA */
+    .sn-cta{display:flex;flex-direction:column;gap:12px;align-items:flex-start;margin-top:22px;padding-top:14px;border-top:1px dashed var(--sn-line)}
+    @media(min-width:640px){.sn-cta{flex-direction:row;align-items:center}}
+    .sn-btn{appearance:none;cursor:pointer;border:0;border-radius:999px;padding:12px 18px;font-weight:800;background:linear-gradient(90deg,var(--sn-accent),var(--sn-accent-2));color:#fff;box-shadow:0 6px 14px rgba(234,88,12,.25);text-decoration:none}
+    .sn-link{font-weight:800;color:var(--sn-accent-2);text-decoration:underline;text-decoration-color:rgba(234,88,12,.35);text-underline-offset:4px}
+    .wte{margin-top: 30px;}
+</style>
+<section id="what-to-expect" class="wte" aria-labelledby="wte-title">
+    <div class="sn-c">
+        <span class="sn-k">Summit Neuro</span>
+        <h2 id="wte-title" class="sn-t">What <span class="sn-grad">To Expect</span></h2>
+        <p class="sn-sub">Turning the dysfunctional into the actionable. We synthesize consensus‑level neurology and vestibular guidelines into one comprehensive, measurable evaluation—so you know what’s happening and how we’ll fix it together.</p>
+
+        <div class="sn-prem">
+            <article class="sn-card"><h3 class="sn-h3">1) Find It</h3><p class="sn-p">If we can’t find it, we can’t fix it. We investigate neurologic, vestibular, proprioceptive, and visuomotor circuits to locate the slowed connections and faulty pathways—on purpose.</p></article>
+            <article class="sn-card"><h3 class="sn-h3">2) Reverse‑Engineer It</h3><p class="sn-p">We map imbalances and weaknesses, then design drills to correct, compensate, or train through them—so function improves in the right places.</p></article>
+            <article class="sn-card"><h3 class="sn-h3">3) Optimize It</h3><p class="sn-p">We build therapeutic strategies to maximize gains, re‑test frequently, and maintain momentum with clear measurables.</p></article>
+        </div>
+
+        <div class="sn-steps">
+            <h3 class="sn-t" style="font-size:1.5rem">Your Visit, Step by Step</h3>
+            <div class="sn-stepGrid" role="list">
+            <article class="sn-step" role="listitem"><span class="sn-badge">Start</span><h4 class="sn-h3">Phone or Telehealth</h4><p class="sn-p">Brief call to align on goals and fit.</p></article>
+            <article class="sn-step" role="listitem"><span class="sn-badge">Prep</span><h4 class="sn-h3">Paperwork & Questionnaires</h4><p class="sn-p">We review detailed history to target testing.</p></article>
+            <article class="sn-step" role="listitem"><span class="sn-badge">Day 1</span><h4 class="sn-h3">Comprehensive Exam (2.5–4 hrs)</h4><p class="sn-p">High‑tech, low‑tech, and hands‑on assessments across vision, vestibular, cerebellar, gait/posture, cognition, and autonomics.</p></article>
+            <article class="sn-step" role="listitem"><span class="sn-badge">Tools</span><h4 class="sn-h3">Spryson NeuroAI + NeuroSync</h4><p class="sn-p">Objective eye‑brain mapping and AI‑assisted notes for precise, repeatable measures.</p></article>
+            <article class="sn-step" role="listitem"><span class="sn-badge">Plan</span><h4 class="sn-h3">Strategy & First Wins</h4><p class="sn-p">Same‑day drills to demonstrate live‑time improvement when possible.</p></article>
+            <article class="sn-step" role="listitem"><span class="sn-badge">Track</span><h4 class="sn-h3">Re‑Testing & Measurables</h4><p class="sn-p">We prove progress, then set maintenance to surpass milestones.</p></article>
+            </div>
+        </div>
+
+        <div class="sn-panel" role="note">
+            <strong style="color:var(--sn-accent-2)">When progress varies:</strong>
+            <p class="sn-p">Many factors can slow recovery—prior injuries and concussions, infections or autoimmune issues, genetic and metabolic factors, hormone imbalance, dietary/environmental triggers, low cardiovascular training, insulin resistance/low insulin sensitivity, low HRV, blood‑pressure issues, medication side effects, poor sleep, over‑training/over‑thinking, and polypharmacy (≥5 meds/day). Neuroplasticity needs repetition and consistency—we’ll coach you through it.</p>
+        </div>
+
+        <div class="sn-cta">
+            <a class="sn-btn" href="{% url 'core:contact-us' %}" rel="noopener">Book a telehealth consult</a>
+            <a class="sn-link" href="tel:14252427246">Call 425‑242‑7246</a>
+        </div>
+    </div>
+</section>
+{% endblock content %}

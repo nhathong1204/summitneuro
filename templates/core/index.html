@@ -17,11 +17,11 @@
     <div class="main-slides-item">
         <div class="container">
             <div class="main-slides-content">
-                <h1 style="color: #FFFFFF">Summit Neuro: <br /><span style="color:#FFB700">Where Innovation Sparks Recovery</span></h1>
-                <p style="color: #F9F161;">Where Cutting-Edge Science Technology Meets Neurological Healing: The PNW's Leading Center.</p>
+                <h1 style="color: #FFFFFF !important;">Summit Neuro: <br /><span style="color:#FFB700; font-size: 30px;">Feel Better. Move Better. Think Faster.</span></h1>
+                <p style="color: #F9F161;">Brain Based Therapeutics with Neuro AI</p>
                 
                 <div class="slides-btn">
-                    <a target="_blank" href="http://summitneuro.janeapp.com/" class="default-btn">Book Appointment</a>
+                    <a href="{% url 'core:contact-us' %}" class="default-btn">Book Appointment</a>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
 <!-- End Main Slides Area -->
 
 <!-- Start Features Area -->
-<section class="features-area pb-70">
+<section class="features-area pt-20">
     <div class="container">
         <div class="row">
             <div class="col-lg-4 col-md-6">
@@ -39,7 +39,7 @@
                         <h3>
                             <a href="javascript:void(0)">Concussion Recovery</a>
                         </h3>
-                        <p>Target neuro-rehab to restore clarity and resiliency</p>
+                        <p>Targeted Neuro-Rehab to Restore Resiliency and Cognitive Reserve</p>
                     </div>
                 </div>
             </div>
@@ -48,9 +48,9 @@
                 <div class="single-features bg-f57e57">
                     <div class="content">
                         <h3>
-                            <a href="javascript:void(0)">Dizziness & Balance</a>
+                            <a href="javascript:void(0)">Dizziness &amp; Balance Rehab</a>
                         </h3>
-                        <p>Vestibular testing and retraining for steady, confident movement</p>
+                        <p>Vestibular, Proprioceptive, and Brain Training to Restore Feeling Steady and Confident</p>
                     </div>
                 </div>
             </div>
@@ -59,9 +59,9 @@
                 <div class="single-features bg-4a6577">
                     <div class="content">
                         <h3>
-                            <a href="javascript:void(0)">Brain Fog & Cognitive Performance</a>
+                            <a href="javascript:void(0)">Brain Fog and Cognitive Performance</a>
                         </h3>
-                        <p>Cognitive tuning powered by <strong>Spryson Neuro AI</strong></p>
+                        <p>Cognitive Tuning Powered by <strong>Spryson Neuro AI</strong></p>
                     </div>
                 </div>
             </div>
@@ -71,7 +71,7 @@
 <!-- End Features Area -->
 
 <!-- Start Services Area -->
-<section class="services-area pb-70">
+<section class="services-area pt-20">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-7">
@@ -139,7 +139,7 @@
 <!-- End Services Area -->
 
 <!-- Start Overview Area -->
-<section class="overview-area">
+<section class="overview-area pt-20">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8">
@@ -164,7 +164,7 @@
 <!-- End Overview Area -->
 
 <!-- Start OC FAQ Area -->
-<div class="oc-faq-area pb-100">
+<div class="oc-faq-area pt-20">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-12">
@@ -213,7 +213,7 @@
 <!-- End About Area -->
 
 <!-- Start Doctor Area -->
-<section class="about-area pb-100">
+<section class="about-area pt-20">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
@@ -251,7 +251,7 @@
                                 </li>
                                 <li>
                                     <i class="flaticon-check"></i>
-                                    Award-Winning: <span style="color: #6a6c72">Three-time "Best of Kent" winner.</span>
+                                    Award-Winning: <span style="color: #6a6c72">Three Time Seattle Met "Top Doc"</span>
                                 </li>
                             </ul>
 
@@ -273,7 +273,7 @@
 
 {% if blogs %}
 <!-- Start Blog Area -->
-<section class="blog-area pt-100 pb-70">
+<section class="blog-area pt-20">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-5">
@@ -300,19 +300,18 @@
                         <div class="blog-image">
                             <a href="{% url 'core:blog-detail' blog.slug %}">
                             {% if blog.image %}
-                                <img src="{{ blog.image.url }}" style="height: 280px;" alt="image">
+                                <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
                             {% endif %}
                             </a>
                             <div class="tag">{{ blog.created_at|date:"d M" }}</div>
                         </div>
                         <div class="blog-content">
                             <div class="child_blog_content">
-                                <h3>
+                                <h5>
                                     <a href="{% url 'core:blog-detail' blog.slug %}">{{ blog.title|truncatewords:80 }}</a>
-                                </h3>
+                                </h5>
                                 <p style="height: 110px;">{{ blog.mini_description|truncatewords:30 }}</p>
                             </div>
-                            <!-- <a href="{% url 'core:blog-detail' blog.slug %}" class="blog-btn">Read More</a> -->
 
                             <ul class="entry-meta">
                                 <li>
@@ -327,8 +326,8 @@
                     </div>
                 </div>
             {% endfor %}
-
         </div>
+        <center><a href="{% url 'core:blogs' %}" class="default-btn" style="margin-bottom: 30px; padding: 10px 20px;">More Blogs</a></center>
     </div>
 </section>
 <!-- End Blog Area -->

@@ -28,7 +28,7 @@
 <!-- End Page Banner -->
 
 <!-- Start Blog Area -->
-<section class="blog-area pt-100 pb-100">
+<section class="blog-area pt-20 pb-20">
     <div class="container">
         <div class="section-title">
             <span class="sub-title">
@@ -46,19 +46,18 @@
                         <div class="blog-image">
                             <a href="{% url 'core:blog-detail' blog.slug %}">
                             {% if blog.image %}
-                                <img src="{{ blog.image.url }}" style="height: 280px;" alt="image">
+                                <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
                             {% endif %}
                             </a>
                             <div class="tag">{{ blog.created_at|date:"d M" }}</div>
                         </div>
                         <div class="blog-content">
                             <div class="child_blog_content">
-                                <h3>
+                                <h5>
                                     <a href="{% url 'core:blog-detail' blog.slug %}">{{ blog.title|truncatewords:80 }}</a>
-                                </h3>
+                                </h5>
                                 <p style="height: 110px;">{{ blog.mini_description|truncatewords:30 }}</p>
                             </div>
-                            <!-- <a href="{% url 'core:blog-detail' blog.slug %}" class="blog-btn">Read More</a> -->
 
                             <ul class="entry-meta">
                                 <li>
@@ -74,7 +73,7 @@
                 </div>
             {% endfor %}
 
-            {% if total_blogs > 3 %}
+            {% if total_blogs > 6 %}
                 <div class="col-lg-12 col-md-12">
                     <div class="pagination-area">
                         {% if blogs.has_previous %}

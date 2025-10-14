@@ -1,0 +1,82 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block meta_header %}
+    <title>Summit Neuro | What We Treat</title>
+    <meta name="description" content="Summit Neuro – Bellevue’s Leader in Concussion Recovery, Brain Fog Relief, Dizziness Care & Cognitive Boost Using Advanced Neural AI Assessments.">
+    <meta name="description" content="Summit Neuro – Bellevue’s Leader in Concussion Recovery, Brain Fog Relief, Dizziness Care & Cognitive Boost Using Advanced Neural AI Assessments.">
+    <meta property="og:title" content="Summit Neuro | Concussion Recovery & Brain Performance in Bellevue">
+    <meta property="og:description" content="Personalized concussion care, brain fog relief, dizziness treatment & cognitive optimization using advanced Neural AI assessments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.summitneuro.com">
+    <meta property="og:image" content="{% static 'assets/images/summitneuro_master_logo.png' %}" />
+{% endblock meta_header %}
+{% block content %}
+<style>
+.what-we-treat {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem 1rem;
+}
+.treatment {
+    background: #f9f9f9;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.treatment .btn {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #e8903c; /* amber accent */
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+</style>
+<section class="what-we-treat wte">
+    <div class="treatment">
+    <h2>Concussion & TBI</h2>
+    <p>Our advanced neuro-functional exam and <strong>Spryson NeuroAI</strong> analytics identify disrupted neural circuits after concussion or head injury. Using <strong>NeuroSync</strong> technology, we retrain precise brain-body pathways to restore balance, focus, and performance.</p>
+    <a href="/concussion-tbi" class="btn">Learn More</a>
+    </div>
+
+    <div class="treatment">
+    <h2>Dizziness & Balance Disorders</h2>
+    <p>We combine vestibular and ocular tracking tests with <strong>Spryson NeuroAI</strong> pattern analysis to uncover the true source of imbalance. <strong>NeuroSync</strong> recalibration then strengthens neural coordination and spatial awareness for lasting stability.</p>
+    <a href="/dizziness-balance" class="btn">Learn More</a>
+    </div>
+
+    <div class="treatment">
+    <h2>Brain Fog & Cognitive Performance</h2>
+    <p>Through detailed neuro-cognitive evaluation and AI-driven mapping, we detect subtle inefficiencies in brain processing. <strong>NeuroSync</strong> optimization sessions restore clarity, energy, and sharper mental performance.</p>
+    <a href="/brain-fog-performance" class="btn">Learn More</a>
+    </div>
+
+    <div class="treatment">
+    <h2>Dysautonomia</h2>
+    <p>Our comprehensive autonomic testing integrates <strong>NeuroAI</strong> analytics to assess and map heart-rate, vascular, and energy regulation patterns. <strong>NeuroSync</strong> neuromodulation restores rhythm, improves regulation, and supports daily resilience.</p>
+    <a href="/dysautonomia" class="btn">Learn More</a>
+    </div>
+
+    <div class="treatment">
+    <h2>Eye Movement & Visual-Motor Issues</h2>
+    <p>We perform precision eye-tracking exams interpreted through <strong>Spryson NeuroAI</strong> to locate visual timing or coordination deficits. <strong>NeuroSync</strong> retraining refines ocular control, depth perception, and smooth visual motion.</p>
+    <a href="/eye-movement-visual" class="btn">Learn More</a>
+    </div>
+
+    <div class="treatment">
+    <h2>Mild Cognitive Impairment</h2>
+    <p><strong>Spryson NeuroAI</strong> detects early changes in memory, attention, and processing speed during our advanced neuro-exam. <strong>NeuroSync</strong> cognitive tuning activates stronger neural connectivity to support brain vitality and longevity.</p>
+    <a href="/mild-cognitive-impairment" class="btn">Learn More</a>
+    </div>
+
+    <div class="treatment">
+    <h2>Multiple Sclerosis & Neurological Disorders</h2>
+    <p>Our integrated <strong>NeuroAI</strong>-guided assessment identifies specific communication gaps between brain and body. Targeted <strong>NeuroSync</strong> rehabilitation enhances mobility, coordination, and endurance to help you move with confidence.</p>
+    <a href="/multiple-sclerosis" class="btn">Learn More</a>
+    </div>
+</section>
+
+{% endblock content %}

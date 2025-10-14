@@ -809,19 +809,19 @@ function setTheme(themeName) {
 }
 // function to toggle between light and dark theme
 function toggleTheme() {
-	if (localStorage.getItem('grin_theme') === 'theme-dark') {
-		setTheme('theme-light');
-	} else {
+	if (localStorage.getItem('grin_theme') === 'theme-light') {
 		setTheme('theme-dark');
+	} else {
+		setTheme('theme-light');
 	}
 }
 // Immediately invoked function to set the theme on initial load
 (function () {
-	if (localStorage.getItem('grin_theme') === 'theme-dark') {
+	if (localStorage.getItem('grin_theme') === 'theme-light') {
+		setTheme('theme-light');
+		document.getElementById('slider').checked = true;
+	} else {
 		setTheme('theme-dark');
 		document.getElementById('slider').checked = false;
-	} else {
-		setTheme('theme-light');
-	document.getElementById('slider').checked = true;
 	}
 })();

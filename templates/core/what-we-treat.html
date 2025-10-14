@@ -1,0 +1,93 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block meta_header %}
+    <title>Summit Neuro | What We Treat</title>
+    <meta name="description" content="Summit Neuro – Bellevue’s Leader in Concussion Recovery, Brain Fog Relief, Dizziness Care & Cognitive Boost Using Advanced Neural AI Assessments.">
+    <meta name="description" content="Summit Neuro – Bellevue’s Leader in Concussion Recovery, Brain Fog Relief, Dizziness Care & Cognitive Boost Using Advanced Neural AI Assessments.">
+    <meta property="og:title" content="Summit Neuro | Concussion Recovery & Brain Performance in Bellevue">
+    <meta property="og:description" content="Personalized concussion care, brain fog relief, dizziness treatment & cognitive optimization using advanced Neural AI assessments.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.summitneuro.com">
+    <meta property="og:image" content="{% static 'assets/images/summitneuro_master_logo.png' %}" />
+{% endblock meta_header %}
+{% block content %}
+<style>
+    :root{
+    --sn-ink:#2f2a26;--sn-ink-2:#4b463f;--sn-muted:#6b6a66;--sn-page:#faf8f5;--sn-card:#fff;--sn-accent:#f59e0b;--sn-accent-2:#ea580c;--sn-line:#ece7e0;
+    }
+    *,*:before,*:after{box-sizing:border-box}
+    body{margin:0;background:var(--sn-page);color:var(--sn-ink);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .sn-c{max-width:1120px;margin:auto;padding:24px}
+    @media(min-width:768px){.sn-c{padding:40px 32px}}
+    .sn-k{display:inline-block;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--sn-accent-2)}
+    .sn-t{margin:.4rem 0 .6rem;font-weight:800;line-height:1.15;font-size:2rem}
+    @media(min-width:768px){.sn-t{font-size:2.5rem}}
+    .sn-grad{background:linear-gradient(90deg,var(--sn-accent),var(--sn-accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .sn-sub{color:var(--sn-ink-2);max-width:70ch;font-size:1.05rem}
+    /* Premises */
+    .sn-prem{display:grid;grid-template-columns:1fr;gap:14px;margin-top:18px}
+    @media(min-width:768px){.sn-prem{grid-template-columns:repeat(3,1fr)}}
+    .sn-card{background:var(--sn-card);border:1px solid var(--sn-line);border-radius:16px;box-shadow:0 10px 24px rgba(17,12,4,.06),0 2px 6px rgba(17,12,4,.05);padding:18px}
+    .sn-h3{margin:0 0 6px;font-size:1.1rem}
+    .sn-p{margin:0;color:var(--sn-ink-2)}
+    /* Steps */
+    .sn-steps{margin-top:20px}
+    .sn-stepGrid{display:grid;grid-template-columns:1fr;gap:14px}
+    @media(min-width:768px){.sn-stepGrid{grid-template-columns:repeat(3,1fr)}}
+    .sn-step{background:var(--sn-card);border:1px solid var(--sn-line);border-radius:16px;padding:18px}
+    .sn-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:#fff7ed;border:1px solid #ffe7c2;color:var(--sn-accent-2);font-weight:800;font-size:.85rem;margin-bottom:10px}
+    /* Why progress varies */
+    .sn-panel{margin-bottom:30px;padding:16px;border-radius:16px;background:#fff7ed;border:1px solid #ffe7c2}
+    .sn-ul{margin:10px 0 0;padding-left:18px;color:var(--sn-ink-2)}
+    /* CTA */
+    .sn-cta{display:flex;flex-direction:column;gap:12px;align-items:flex-start;margin-top:22px;padding-top:14px;border-top:1px dashed var(--sn-line)}
+    @media(min-width:640px){.sn-cta{flex-direction:row;align-items:center}}
+    .sn-btn{appearance:none;cursor:pointer;border:0;border-radius:999px;padding:12px 18px;font-weight:800;background:linear-gradient(90deg,var(--sn-accent),var(--sn-accent-2));color:#fff;box-shadow:0 6px 14px rgba(234,88,12,.25);text-decoration:none}
+    .sn-link{font-weight:800;color:var(--sn-accent-2);text-decoration:underline;text-decoration-color:rgba(234,88,12,.35);text-underline-offset:4px}
+    .wte{margin-top: 30px;}
+</style>
+<section id="what-to-expect" class="wte" aria-labelledby="wte-title">
+    <div class="sn-c">
+        <span class="sn-k">Summit Neuro</span>
+        <h2 id="wte-title" class="sn-t">What <span class="sn-grad">We Treat</span></h2>
+        <p class="sn-sub">At Summit Neuro, we target the root causes behind your neurological, balance, and performance challenges—not just the symptoms. Using our <strong>Spryson NeuroAI</strong> and <strong>NeuroSync</strong> analytics, we identify disrupted brain-body communication patterns, then design personalized programs to restore clarity, coordination, and control.</p>
+
+        <h3 class="sn-t" style="font-size:1.5rem">Concussion & TBI</h3>
+        <div class="sn-panel" role="note">
+            <p class="sn-p">Our advanced neuro-functional exam and <strong>Spryson NeuroAI</strong> analytics identify disrupted neural circuits after concussion or head injury.</p>
+            <p class="sn-p">Using <strong> NeuroSync</strong> technology, we retrain precise brain-body pathways to restore balance, focus, and performance.</p>
+        </div>
+        <h3 class="sn-t" style="font-size:1.5rem">Dizziness & Balance Disorders</h3>
+        <div class="sn-panel" role="note">
+            <p class="sn-p">We combine vestibular and ocular tracking tests with <strong>Spryson NeuroAI</strong> pattern analysis to uncover the true source of imbalance.</p>
+            <p class="sn-p"><strong> NeuroSync</strong> recalibration then strengthens neural coordination and spatial awareness for lasting stability.</p>
+        </div>
+        <h3 class="sn-t" style="font-size:1.5rem">Brain Fog & Cognitive Performance</h3>
+        <div class="sn-panel" role="note">
+            <p class="sn-p">Through detailed neuro-cognitive evaluation and AI-driven mapping, we detect subtle inefficiencies in brain processing.</p>
+            <p class="sn-p"><strong> NeuroSync</strong> optimization sessions restore clarity, energy, and sharper mental performance.</p>
+        </div>
+        <h3 class="sn-t" style="font-size:1.5rem">Dysautonomia</h3>
+        <div class="sn-panel" role="note">
+            <p class="sn-p">Our comprehensive autonomic testing integrates <strong>NeuroAI</strong> analytics to assess and map heart-rate, vascular, and energy regulation patterns.</p>
+            <p class="sn-p"><strong> NeuroSync</strong> neuromodulation restores rhythm, improves regulation, and supports daily resilience.</p>
+        </div>
+        <h3 class="sn-t" style="font-size:1.5rem">Eye Movement & Visual-Motor Issues</h3>
+        <div class="sn-panel" role="note">
+            <p class="sn-p">We perform precision eye-tracking exams interpreted through <strong>Spryson NeuroAI</strong> to locate visual timing or coordination deficits.</p>
+            <p class="sn-p"><strong> NeuroSync</strong> retraining refines ocular control, depth perception, and smooth visual motion.</p>
+        </div>
+        <h3 class="sn-t" style="font-size:1.5rem">Multiple Sclerosis & Neurological Disorders</h3>
+        <div class="sn-panel" role="note">
+            <p class="sn-p">Our integrated <strong>NeuroAI</strong>-guided assessment identifies specific communication gaps between brain and body.</p>
+            <p class="sn-p">Targeted <strong> NeuroSync</strong> rehabilitation enhances mobility, coordination, and endurance to help you move with confidence.</p>
+        </div>
+
+        <div class="sn-cta">
+            <a class="sn-btn" href="{% url 'core:contact-us' %}" rel="noopener">Book a telehealth consult</a>
+            <a class="sn-link" href="tel:14252427246">Call 425‑242‑7246</a>
+        </div>
+    </div>
+</section>
+{% endblock content %}

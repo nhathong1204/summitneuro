@@ -49,61 +49,6 @@
             </div>
         </div>
         <!-- End Preloader Area -->
-        
-        <!-- Start Top Header Area -->
-        <!-- <div class="top-header-area">
-            <div class="container">
-                <div class="row align-items-center" id="about_us">
-                    <div class="col-lg-8 col-md-12">
-                        <ul class="top-header-information">
-                            <li>
-                                <i class='bx bxs-map'></i>
-                                1601 114th Ave SE, Bellevue, WA 98004, United States
-                            </li>
-
-                            <li>
-                                <i class='bx bx-envelope-open'></i>
-                                <a href="mailto:admin@summitneuro.com"><span class="__cf_email__" data-cfemail="e794929797889593a780958e89c984888a">admin@summitneuro.com</span></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-4 col-md-12">
-                        <ul class="top-header-optional">
-                            <li>
-                                <a href="https://www.facebook.com/ReboundSportsMed" target="_blank">
-                                    <i class='bx bxl-facebook'></i>
-                                </a>
-                                <a href="https://www.instagram.com/rebound_sportsmed/" target="_blank">
-                                    <i class='bx bxl-instagram'></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- End Top Header Area -->
-
-        <!-- Start Middle Header Area -->
-        <!-- <div class="middle-header-area">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 col-md-12">
-                        <div class="middle-header">
-                            <h1>
-                                <a href="{% url 'core:index' %}"><img src="{% static 'assets/images/home_logo.png' %}" class="main-logo" alt="logo"></a>
-                            </h1>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-8 col-md-12">
-                        <h3 style="float: right;"><span style="font-weight: 100; color: #6a6c72;padding-right:10px">Call Today</span> 425.242.7246</h3>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- End Middle Header Area -->
 
         <!-- Start Navbar Area -->
         <div class="navbar-area">
@@ -153,33 +98,21 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a href="javascript:void(0)" class="nav-link">
+                                    <a href="{% url 'core:what-we-treat' %}" class="nav-link {% if request.resolver_match.url_name == 'what-we-treat' %}active{% endif %}">
                                         What We Treat
-                                        <i class='bx bx-caret-down'></i>
                                     </a>
-                                    <ul class="dropdown-menu">
-                                        <li class="nav-item">
-                                            <a href="javascript:void(0)" class="nav-link">Concussion & TBI</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="javascript:void(0)" class="nav-link">Dizziness, Headaches, & Vertigo</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="javascript:void(0)" class="nav-link">Parkinson's, POTS, & BPPV</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="javascript:void(0)" class="nav-link">Mild Cognitive Impairment Testing</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="javascript:void(0)" class="nav-link">Dysautonomia</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="javascript:void(0)" class="nav-link">Multiple Sclerosis Assessment and Rehabilitation</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a href="javascript:void(0)" class="nav-link">Eye Muscle Weakness</a>
-                                        </li>
-                                    </ul>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{% url 'core:what-we-do' %}" class="nav-link {% if request.resolver_match.url_name == 'what-we-do' %}active{% endif %}">
+                                        What We Do
+                                    </a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a href="{% url 'core:what-to-expect' %}" class="nav-link {% if request.resolver_match.url_name == 'what-to-expect' %}active{% endif %}">
+                                        What To Expect
+                                    </a>
                                 </li>
 
                                 {% if blogs %}
@@ -193,41 +126,17 @@
                                 </li>
                             </ul>
 
-                            <h5 style="float: right; padding: 20px 20px 10px 0px;"><span style="font-weight: 100; color: #6a6c72;padding-right:10px">Call Today</span> <a href="tel:4252427246">425.242.7246</a></h5>
+                            <h5 style="float: right; padding: 20px 20px 10px 0px;"><span style="font-weight: 100; color: #6a6c72;padding-right:10px">Call Today</span> <a href="tel:14252427246">425.242.7246</a></h5>
 
                             <div class="others-options d-flex align-items-center">
                                 <div class="option-item">
                                     <div class="navbar-btn">
-                                        <a target="_blank" href="http://summitneuro.janeapp.com/" class="default-btn">Book Appointment</a>
+                                        <a href="{% url 'core:contact-us' %}" class="default-btn">Book Appointment</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </nav>
-                </div>
-            </div>
-
-            <div class="others-option-for-responsive">
-                <div class="container">
-                    <div class="dot-menu">
-                        <div class="inner">
-                            <div class="circle circle-one"></div>
-                            <div class="circle circle-two"></div>
-                            <div class="circle circle-three"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="container">
-                        <div class="option-inner">
-                            <div class="others-options d-flex align-items-center">
-                                <div class="option-item">
-                                    <div class="navbar-btn">
-                                        <a target="_blank" href="http://summitneuro.janeapp.com/" class="default-btn">Book Appointment</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -261,7 +170,7 @@
         <!-- End Main Content Area -->
 
         <!-- Start Footer Area -->
-        <footer class="footer-area pt-100 pb-70">
+        <footer class="footer-area pt-20">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
@@ -272,33 +181,22 @@
                         </div>
                     </div>
 
-                    <!-- <div class="col-lg-3 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h3>About</h3>
-
-                            <ul class="quick-links">
-                                <li>
-                                    <a href="#about_us" class="nav-link"><strong style="font-size: 16px;">About Us</strong></a>
-                                </li>
-                                <li>
-                                    <a href="#our_teams" class="nav-link"><strong style="font-size: 16px;">Our Team</strong></a>
-                                </li>
-                                <li>
-                                    <a href="#our_services" class="nav-link"><strong style="font-size: 16px;">Our Services</strong></a>
-                            </ul>
-                        </div>
-                    </div> -->
-
                     <div class="col-lg-4 col-sm-6">
                         <div class="single-footer-widget">
                             <h3>Treatment Times</h3>
 
                             <ul class="quick-links">
                                 <li>
+                                    We Will Have Exam and Treatment Times Open on Weekends.
+                                </li>
+                                <li>
+                                    All times are by Appointment ONLY. No Walk-Ins.
+                                </li>
+                                <li>
                                     <strong style="font-size: 16px;">Email: </strong><a href="mailto:SummitNeuro1@gmail.com">SummitNeuro1@gmail.com</a>
                                 </li>
                                 <li>
-                                    Email us to request a phone call and / or a Telehealth Video Conference
+                                    We will set up a call or video chat to discuss how we can help.
                                 </li>
                             </ul>
                         </div>
@@ -319,7 +217,7 @@
                                     Bellevue, WA 98004
                                 </li>
                                 <li>
-                                    <strong style="font-size: 16px;">Phone: </strong><a href="tel:4252427246">425.242.7246</a>
+                                    <strong style="font-size: 16px;">Phone: </strong><a href="tel:14252427246">425.242.7246</a>
                                 </li>
                             </ul>
                         </div>
@@ -350,20 +248,6 @@
         </div>
         <!-- End Go Top Area -->
 
-        <!--Start of Tawk.to Script-->
-        <!-- <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-            s1.async=true;
-            s1.src='https://embed.tawk.to/67de1c7ae9ba40190d65ccb9/1imtpufq9';
-            s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
-            s0.parentNode.insertBefore(s1,s0);
-            })();
-        </script> -->
-    <!--End of Tawk.to Script-->
-        
         <script type="application/ld+json">
             {
             "@context": "https://schema.org/",

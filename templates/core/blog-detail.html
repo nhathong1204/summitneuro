@@ -39,7 +39,7 @@
                 <div class="blog-details-desc">
                     <div class="article-image">
                         {% if blog.image %}
-                            <img src="{{ blog.image.url }}" style="height: 280px;" alt="image">
+                            <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
                         {% endif %}
 
                         <div class="tag">{{ blog.created_at|date:"d M" }}</div>
